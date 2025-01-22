@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Build directories
+/build/
+/dist/
+# Ignore Google Cloud Service Account JSON file
+star-taxi-bfd86-90bda9de299f.json
