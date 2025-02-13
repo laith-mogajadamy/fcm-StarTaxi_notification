@@ -4,7 +4,7 @@ const path = require('path');
 const axios = require('axios');
 
 // Path to your service account key JSON file
-const SERVICE_ACCOUNT_KEY_PATH = path.join(__dirname, 'star-taxi-bfd86-90bda9de299f.json');
+const SERVICE_ACCOUNT_KEY_PATH = path.join(__dirname, 'star-taxi-bfd86-firebase-adminsdk-fbsvc-cfa4c39e32.json');
 
 // Load the service account key JSON file
 const serviceAccount = JSON.parse(fs.readFileSync(SERVICE_ACCOUNT_KEY_PATH, 'utf8'));
@@ -36,7 +36,7 @@ jwtClient.authorize(function (err, tokens) {
 function sendNotification(accessToken) {
     const notificationPayload = {
         message: {
-            topic: 'driver',
+            topic: 'customer',
             // token: 'cdG-br62QVmY35xnnnu3Wc:APA91bEfLERJWUXwm8VnoWjZfBrw4IPj03-9e1u8qPRoFLwsEKa95iIpTHnviG5GZ_HEktrbsYhVicYGLg4jg2rP0Yi9d1sxQxuprP20iW7zKOcUsSLoSAA',  // Replace with your recipient device's FCM token
             notification: {
                 title: 'Hello!',
@@ -44,8 +44,8 @@ function sendNotification(accessToken) {
             },
             android: {
                 notification: {
-                    channel_id: "channel_id2",
-                    title: "Hello drivers",
+                    channel_id: "channel_id",
+                    title: "new test laith",
                     body: "android body ",
                     sound: "default", // Play the default notification sound
                     // sound: "car_horn_notification_sound",
